@@ -4,8 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Meme Slider</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <input type="radio" name="slider" id="slide1" checked />
+      <input type="radio" name="slider" id="slide2" />
+      <input type="radio" name="slider" id="slide3" />
+      <input type="radio" name="slider" id="slide4" />
+
+      <div class="slides">
+        <label for="slide1" class="slide">
+          <img src="img/meme1.jpg" alt="meme" class="slide__img" />
+        </label>
+        <label for="slide2" class="slide">
+          <img src="img/meme2.jpg" alt="meme" class="slide__img" />
+        </label>
+        <label for="slide3" class="slide">
+          <img src="img/meme3.jpg" alt="meme" class="slide__img" />
+        </label>
+        <label for="slide4" class="slide">
+          <img src="img/meme4.jpg" alt="meme" class="slide__img" />
+        </label>
+      </div>
+
+      <div class="controls">
+        <label for="slide1" class="slide__control">O</label>
+        <label for="slide2" class="slide__control">O</label>
+        <label for="slide3" class="slide__control">O</label>
+        <label for="slide4" class="slide__control">O</label>
+      </div>
+
+      <div class="captions">
+        <label for="slide2" class="slide__caption">Caption 1</label>
+        <label for="slide1" class="slide__caption">Caption 2</label>
+        <label for="slide3" class="slide__caption">Caption 3</label>
+        <label for="slide4" class="slide__caption">Caption 4</label>
+      </div>
+    </div>
+  </body>
 </html>
