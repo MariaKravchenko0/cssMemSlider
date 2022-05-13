@@ -4,14 +4,24 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .container {
-  width: 65vw;
+  width: 62vw;
   margin: 0 auto;
+  padding: 1vh 1vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'slider slider' 'captions controls';
+  gap: 1rem;
   justify-content: space-between;
-  border: solid 1px #e49494;
+  align-items: center;
+  /* border: solid 1px #e49494; */
 }
 
 input {
@@ -20,39 +30,86 @@ input {
 
 .slides {
   display: flex;
-  width: 100%;
+  /* gap: 1vw; */
+  /* width: 100%; */
   overflow-x: hidden;
   grid-area: slider;
-  border: solid 3px #7eb88f;
-}
-
-.slide {
-  display: block;
-  width: 100%;
-  border: solid 1px #e494cc;
+  /* border: solid 3px #7eb88f; */
 }
 
 .slide__img {
-  width: 65vw;
+  width: 60vw;
   aspect-ratio: 2.5 / 1.5;
   object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.7, 0, 0.25, 1);
 }
 
 .controls {
   display: flex;
+  gap: 1rem;
   justify-content: flex-end;
   grid-area: controls;
+}
+
+.slide__label {
+  box-sizing: unset;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem;
+}
+
+.slide__control {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: blueviolet;
+}
+
+.slide__label:hover .slide__control {
+  background-color: aqua;
 }
 
 .captions {
   display: flex;
   grid-area: captions;
-  width: 100%;
+  /* width: 100%; */
   overflow: hidden;
 }
 
 .slide__caption {
   flex-shrink: 0;
   width: 100%;
-  border: solid 1px #e494cc;
+  font-size: 1.5rem;
+  transition: transform 0.5s cubic-bezier(0.7, 0, 0.25, 1);
 }
+
+#slide1:checked ~ .slides .slide__img,
+#slide1:checked ~ .captions .slide__caption {
+  transform: translateX(0%);
+}
+#slide2:checked ~ .slides .slide__img,
+#slide2:checked ~ .captions .slide__caption {
+  transform: translatex(-100%);
+}
+#slide3:checked ~ .slides .slide__img,
+#slide3:checked ~ .captions .slide__caption {
+  transform: translatex(-200%);
+}
+#slide4:checked ~ .slides .slide__img,
+#slide4:checked ~ .captions .slide__caption {
+  transform: translatex(-300%);
+}
+
+/* #slide1:checked ~ .captions .slide__caption {
+  transform: translateX(0%);
+}
+#slide2:checked ~ .captions .slide__caption {
+  transform: translatex(-100%);
+}
+#slide3:checked ~ .captions .slide__caption {
+  transform: translatex(-200%);
+}
+#slide4:checked ~ .captions .slide__caption {
+  transform: translatex(-300%);
+} */
