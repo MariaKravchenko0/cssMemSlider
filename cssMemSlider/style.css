@@ -113,3 +113,17 @@ input {
 #slide4:checked ~ .captions .slide__caption {
   transform: translatex(-300%);
 } */
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-areas: 'slider slider' 'controls controls' 'captions captions';
+  }
+
+  .controls {
+    justify-content: center;
+  }
+
+  .slide__caption {
+    text-align: center;
+  }
+}
