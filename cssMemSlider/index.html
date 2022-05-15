@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meme Slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -14,41 +20,35 @@
       <input type="radio" name="slider" id="slide3" />
       <input type="radio" name="slider" id="slide4" />
 
-      <div class="slides">
-        <label for="slide1">
-          <img src="img/meme1.jpg" alt="meme" class="slide__img" />
-        </label>
-        <label for="slide2">
-          <img src="img/meme2.jpg" alt="meme" class="slide__img" />
-        </label>
-        <label for="slide3">
-          <img src="img/meme3.jpg" alt="meme" class="slide__img" />
-        </label>
-        <label for="slide4">
-          <img src="img/meme4.jpg" alt="meme" class="slide__img" />
-        </label>
+      <div class="slider">
+        <div class="slides">
+          <img src="img/meme1.jpg" alt="meme" class="slider__img" />
+          <img src="img/meme2.jpg" alt="meme" class="slider__img" />
+          <img src="img/meme3.jpg" alt="meme" class="slider__img" />
+          <img src="img/meme4.jpg" alt="meme" class="slider__img" />
+        </div>
       </div>
 
       <div class="controls">
-        <label for="slide1" class="slide__label"
-          ><span class="slide__control"></span
+        <label for="slide1" class="slider__label">
+          <span class="slider__control"></span
         ></label>
-        <label for="slide2" class="slide__label"
-          ><span class="slide__control"></span
+        <label for="slide2" class="slider__label"
+          ><span class="slider__control"></span
         ></label>
-        <label for="slide3" class="slide__label"
-          ><span class="slide__control"></span
+        <label for="slide3" class="slider__label"
+          ><span class="slider__control"></span
         ></label>
-        <label for="slide4" class="slide__label"
-          ><span class="slide__control"></span
+        <label for="slide4" class="slider__label"
+          ><span class="slider__control"></span
         ></label>
       </div>
 
       <div class="captions">
-        <label for="slide2" class="slide__caption">Caption 1</label>
-        <label for="slide1" class="slide__caption">Caption 2</label>
-        <label for="slide3" class="slide__caption">Caption 3</label>
-        <label for="slide4" class="slide__caption">Caption 4</label>
+        <p class="slider__caption">Caption 1</p>
+        <p class="slider__caption">Caption 2</p>
+        <p class="slider__caption">Caption 3</p>
+        <p class="slider__caption">Caption 4</p>
       </div>
     </div>
   </body>
